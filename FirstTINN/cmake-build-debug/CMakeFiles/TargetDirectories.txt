@@ -1,0 +1,6 @@
+C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/CMakeFiles/FirstTINN.dir
+C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master/CMakeFiles/Tinn.dir
+C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master/CMakeFiles/edit_cache.dir
+C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master/CMakeFiles/rebuild_cache.dir
