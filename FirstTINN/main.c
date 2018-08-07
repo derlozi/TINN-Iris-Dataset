@@ -6,6 +6,8 @@
 #include <mem.h>
 
 #define LINESIZE 40
+#define nips 4
+#define nops 3
 
 struct dataset
 {
@@ -13,7 +15,7 @@ struct dataset
     int elementcount;
 };
 
-struct data
+struct data// contains one set of features -> the properties of one flower
 {
     float slen;
     float swid;
@@ -24,9 +26,9 @@ struct data
     float isVirginica;
 };
 
-float rate = 0.2;//needs further adjustment, maybe change while training?
+float rate = 0.2; //learning rate
 
-struct dataset addDataset(struct dataset data, int elementnr, char* line)
+struct dataset addDataset(struct dataset data, int elementnr, char* line)// adds the properties of one flower to the set
 {
     char* delimiter = ",";
     char* sp;
@@ -40,19 +42,19 @@ struct dataset addDataset(struct dataset data, int elementnr, char* line)
 
     sp = strtok(NULL, delimiter);
     printf("%s\n", sp);
-    if(strcmp(sp, "Iris-setosa") == 0)
+    if(strcmp(sp, "Iris-setosa\n") == 0)
     {
         (data.set+elementnr)->isSetosa = 1;
         (data.set+elementnr)->isVirginica = 0;
         (data.set+elementnr)->isVersicolor = 0;
     }
-    if(strcmp(sp, "Iris-versicolor") == 0)
+    if(strcmp(sp, "Iris-versicolor\n") == 0)
     {
         (data.set+elementnr)->isSetosa = 0;
         (data.set+elementnr)->isVirginica = 0;
         (data.set+elementnr)->isVersicolor = 1;
     }
-    if(strcmp(sp, "Iris-virginica") == 0)
+    if(strcmp(sp, "Iris-virginica\n") == 0)
     {
         (data.set+elementnr)->isSetosa = 0;
         (data.set+elementnr)->isVirginica = 1;
@@ -61,8 +63,9 @@ struct dataset addDataset(struct dataset data, int elementnr, char* line)
     return data;
 }
 
-struct dataset initializeData(struct dataset tdata, char* filename)
+struct dataset initializeData(char* filename)//reads a textfile with the dataset into the program and stores it
 {
+    struct dataset tdata;
     tdata.set = malloc(1);
     char* line = calloc(LINESIZE, sizeof(char));
     FILE *fp;
@@ -87,62 +90,100 @@ struct dataset initializeData(struct dataset tdata, char* filename)
 }
 
 
-int getRandom(int max)
+float* train(Tinn* netp, struct data* tdata, int datacount, float* errors)
 {
-    time_t t;
-    srand((unsigned) (&t));
-    return rand()%(max+1);
-}
 
-
-float* train(Tinn* netp, struct data* tdata, int datacount)//needs to be rewritten
-{
-    float* errors =calloc(datacount, sizeof(float));
     for(int c  = 0; c< datacount; c++)
     {
-        float in[4] = {(tdata+c)->slen, (tdata+c)->swid, (tdata+c)->plen, (tdata+c)->pwid};
-        float out[3] = {(tdata+c)->isSetosa, (tdata+c)->isVersicolor, (tdata+c)->isVirginica};
+        float in[4] = {(tdata + c)->slen, (tdata + c)->swid, (tdata + c)->plen, (tdata + c)->pwid};
+        float out[3] = {(tdata + c)->isSetosa, (tdata + c)->isVersicolor, (tdata + c)->isVirginica};
         errors[c] = xttrain(*netp, in, out, rate);
     }
     return errors;
 }
 
 
-float getError(float* errors, int datacount)//needs to be rewritten
+float getError(float* errors, int datacount)//averages all errors over one trainig session
 {
     float sum=0;
     for(int c = 0; c<datacount; c++)
     {
-        printf("Error[%d] is: %f\n", c, errors[c]);
-        sum =sum+ errors[c];
+
+        sum+=errors[c];
     }
 
     return sum/datacount;
 }
 
+float testNet(struct dataset testdata, Tinn* netp)
+{
+    int successcount = 0;
+
+
+    for(int c = 0; c<testdata.elementcount; c++)
+    {
+        int prediction;
+
+        float in[4] = {(testdata.set + c)->slen, (testdata.set + c)->swid, (testdata.set + c)->plen, (testdata.set + c)->pwid};
+        float tout[3] = {(testdata.set + c)->isSetosa, (testdata.set + c)->isVersicolor, (testdata.set + c)->isVirginica};
+        float* aout = xtpredict(*netp, in);
+
+        if(aout[0]>aout[1] && aout[0]>aout[2])
+        {
+            prediction = 0;
+        }
+        else if(aout[1]>aout[0] && aout[1]>aout[2])
+        {
+            prediction = 1;
+        }
+        else if(aout[2]>aout[1] && aout[2]> aout[0])
+        {
+            prediction = 2;
+        }
+        else
+        {
+            printf("One prediction was weird...\n");
+            continue;//skip this loop, because of the weird prediction(probably equivalent values)
+        }
+        if(tout[prediction] == 1)
+        {
+            successcount +=1;
+        }
+        else
+        {
+            printf("Predictione was wrong\nTarget:%f %f %f\nPrediction:%f %f %f\n", tout[0], tout[1], tout[2], aout[0], aout[1], aout[2]);
+        }
+    }
+    return (float)successcount/testdata.elementcount;
+}
+
 int main() {
-    struct dataset traindata;
-   // struct dataset testdata
+
     float toterror = 1;//initialize it somewhere over the smallest alloweded error to start training
     int it = 0;
 
-    Tinn net =  xtbuild(4,10,3);
+    Tinn net =  xtbuild(nips,5,nops);
     Tinn* netp = &net;
 
-    traindata = initializeData(traindata, "C:\\Users\\loren\\Documents\\Programmieren\\C\\FirstTINN\\traindata.txt");
-    float* errors = (float*)calloc((size_t)traindata.elementcount, sizeof(float));
-    //initializeData(testdata, "C:\\Users\\loren\\Documents\\Programmieren\\C\\FirstTINN\\testdata.txt");
+    struct dataset traindata = initializeData("C:\\Users\\loren\\Documents\\Programmieren\\C\\FirstTINN\\traindata.txt");
+    struct dataset testdata = initializeData("C:\\Users\\loren\\Documents\\Programmieren\\C\\FirstTINN\\testdata.txt");
+
+    float* errors = (float*)calloc(traindata.elementcount, sizeof(float));
     printf("Press a key to start learning");
     getchar();
-    while(toterror>0.000015)
+    while(toterror>0.008)
     {
-        errors = train(netp, traindata.set, traindata.elementcount);
+        errors = train(netp, traindata.set, traindata.elementcount, errors);
         toterror = getError(errors, traindata.elementcount);
         printf("Training Iteration NR:%i, error is:%f\n", it, toterror);
         it++;
     }
-    printf("The net was successfully trained, the last error was:%f", toterror);
+    printf("The net was successfully trained, the last error was:%f\nContinuing to the testing stage...\n", toterror);
+    float quality = testNet(testdata, netp);
+    printf("The Net was correct in %.1f percent of test cases\n", quality*100);
+    getchar();
+    getchar();
 
-
+    return 0;
 }
 
