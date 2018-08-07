@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="FirstTINN"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\tinn-master\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FirstTINN">
+				<Option output="C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/FirstTINN.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/loren/Documents/Programmieren/C"/>
+					<Add directory="C:/Users/loren/Documents/Programmieren/C/tinn-master"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 FirstTINN"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="FirstTINN/fast">
+				<Option output="C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/FirstTINN.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/loren/Documents/Programmieren/C"/>
+					<Add directory="C:/Users/loren/Documents/Programmieren/C/tinn-master"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 FirstTINN/fast"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tinn">
+				<Option output="C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master/libTinn.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/loren/Documents/Programmieren/C"/>
+					<Add directory="C:/Users/loren/Documents/Programmieren/C/tinn-master"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master/Makefile&quot;  VERBOSE=1 Tinn"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tinn/fast">
+				<Option output="C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master/libTinn.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/loren/Documents/Programmieren/C"/>
+					<Add directory="C:/Users/loren/Documents/Programmieren/C/tinn-master"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../include"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/include-fixed"/>
+					<Add directory="C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master/Makefile&quot;  VERBOSE=1 Tinn/fast"/>
+					<CompileFile command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/TDM-GCC-64/bin/mingw32-make.exe -f &quot;C:/Users/loren/Documents/Programmieren/C/FirstTINN/cmake-build-debug/tinn-master/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/loren/Documents/Programmieren/C/FirstTINN/main.c">
+			<Option target="FirstTINN"/>
+		</Unit>
+		<Unit filename="C:/Users/loren/Documents/Programmieren/C/FirstTINN/tinn-master/Tinn.c">
+			<Option target="Tinn"/>
+		</Unit>
+		<Unit filename="C:/Users/loren/Documents/Programmieren/C/FirstTINN/tinn-master/Tinn.h">
+			<Option target="Tinn"/>
+		</Unit>
+		<Unit filename="C:/Users/loren/Documents/Programmieren/C/FirstTINN/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/loren/Documents/Programmieren/C/FirstTINN/tinn-master/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tinn-master\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

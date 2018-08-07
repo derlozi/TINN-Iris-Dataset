@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/loren/Documents/Programmieren/C/FirstTINN/tinn-master/Tinn.c
+Tinn.h
+C:/Users/loren/Documents/Programmieren/C/FirstTINN/tinn-master/Tinn.h
+stdarg.h
+-
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+
+C:/Users/loren/Documents/Programmieren/C/FirstTINN/tinn-master/Tinn.h
+
